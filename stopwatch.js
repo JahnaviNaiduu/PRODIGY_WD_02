@@ -1,4 +1,4 @@
-// Element selectors
+
 const playButton = document.querySelector('.play');
 const lapButton = document.querySelector('.lap');
 const resetButton = document.querySelector('.reset');
@@ -9,7 +9,7 @@ const millisecondDisplay = document.querySelector('.millisecond');
 const lapsList = document.querySelector('.laps-list');
 const outerCircle = document.querySelector('.outer-circle');
 
-// Stopwatch variables
+
 let isRunning = false;
 let minutes = 0;
 let seconds = 0;
@@ -17,13 +17,13 @@ let milliseconds = 0;
 let lapCount = 0;
 let interval;
 
-// Toggle buttons on play
+
 function toggleButtons() {
   lapButton.classList.remove('hidden');
   resetButton.classList.remove('hidden');
 }
 
-// Start/Stop the stopwatch
+
 function playStopwatch() {
   if (!isRunning) {
     playButton.textContent = 'Pause';
@@ -38,8 +38,6 @@ function playStopwatch() {
   }
   toggleButtons();
 }
-
-// Start timer function
 function startTimer() {
   interval = setInterval(() => {
     milliseconds += 10;
@@ -55,14 +53,14 @@ function startTimer() {
   }, 10);
 }
 
-// Update display of time
+
 function updateDisplay() {
   minuteDisplay.textContent = `${minutes < 10 ? '0' : ''}${minutes}:`;
   secondDisplay.textContent = `${seconds < 10 ? '0' : ''}${seconds}:`;
   millisecondDisplay.textContent = `${milliseconds < 100 ? '0' : ''}${Math.floor(milliseconds / 10)}`;
 }
 
-// Reset the stopwatch
+
 function resetStopwatch() {
   clearInterval(interval);
   minutes = 0;
@@ -78,7 +76,6 @@ function resetStopwatch() {
   outerCircle.classList.remove('pulse');
 }
 
-// Record a lap
 function recordLap() {
   lapCount++;
   const lapItem = document.createElement('li');
@@ -88,14 +85,14 @@ function recordLap() {
   clearLapsButton.classList.remove('hidden');
 }
 
-// Clear all laps
+
 function clearAllLaps() {
   lapsList.innerHTML = '';
   lapCount = 0;
   clearLapsButton.classList.add('hidden');
 }
 
-// Event listeners
+
 playButton.addEventListener('click', playStopwatch);
 resetButton.addEventListener('click', resetStopwatch);
 lapButton.addEventListener('click', recordLap);
