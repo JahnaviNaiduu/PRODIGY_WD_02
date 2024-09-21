@@ -20,7 +20,7 @@ body {
   align-items: center;
 }
 
-/* Outer circle with pulse animation */
+
 .outer-circle {
   width: 250px;
   height: 250px;
@@ -51,7 +51,7 @@ body {
   }
 }
 
-/* Inner circle */
+
 .inner-circle {
   width: 220px;
   height: 220px;
@@ -76,7 +76,7 @@ body {
   gap: 15px;
 }
 
-/* Button styles with hover and animation */
+
 .button {
   padding: 10px 20px;
   border-radius: 5px;
@@ -107,7 +107,7 @@ body {
   list-style-type: none;
 }
 
-/* Lap item appearance */
+
 .laps-list li {
   padding: 10px;
   background-color: #333;
@@ -117,7 +117,7 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Clear button style */
+
 .clear-laps {
   margin-top: 10px;
   padding: 5px;
@@ -138,7 +138,7 @@ body {
   visibility: hidden;
 }
 
-/* Fade in animation for lap items */
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
